@@ -1,0 +1,24 @@
+What is Constructor?
+-----------------------
+
+Constructors are special member functions whose task is to initialize the objects of its class. 
+It is treated as a special member function because its name is the same as the class name. 
+Java constructors are invoked when their objects are created. It is named such because, it 
+constructs the value, i.e., provide data for the object, i.e., they are used to initialize 
+objects. Every class has a constructor when we don't explicitly declare a constructor for 
+any java class the compiler creates a default constructor for that class which does not have 
+any return type. The constructor in Java cannot be abstract, static, final or synchronized 
+and these modifiers are not allowed for the constructor.
+
+
+Features of Constructor:-
+---------------------------
+1) An interface cannot have the constructor.
+2) Constructors cannot be private.
+3) A constructor cannot be abstract, static, final, native, strictfp, or synchronized
+4) A constructor can be overloaded.
+5) Constructors cannot return a value.
+6) Constructors do not have a return type; not even void.
+7) An abstract class can have the constructor.
+8) Constructors name must be similar to that of the class name inside which it resides.
+9) Constructors are automatically called when an object is created.
