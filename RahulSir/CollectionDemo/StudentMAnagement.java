@@ -1,3 +1,8 @@
+/*
+    Author: Nisarg Shah
+    Topic: Student Management Program
+    DOC: 17-04-2021
+*/
 package RahulSir.CollectionDemo;
 
 import java.util.ArrayList;
@@ -71,6 +76,7 @@ public class StudentManagement {
                                 + sdisp.getstd() + "\n");
                         break;
                     }
+                    System.out.println("Please enter a valid name....");
                 }
                 break;
             case 6:
