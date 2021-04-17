@@ -3,7 +3,7 @@ package RahulSir.CollectionDemo;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class StudentMAnagement {
+public class StudentManagement {
     public static void main(String[] args) {
         ArrayList<Student> list = new ArrayList<Student>();
         int choice = 0;
