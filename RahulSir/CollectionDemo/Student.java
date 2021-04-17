@@ -1,4 +1,4 @@
-package IODemo;
+package RahulSir.CollectionDemo;
 import java.util.Scanner;
 public class Student {
     private int rno;
@@ -39,21 +39,21 @@ public class Student {
     }
 
     public void scan() 
-	{	
-		System.out.println("Enter Rno : ");
+	{
+		System.out.print("Enter Rno : ");
 		rno = sc.nextInt();
 		sc.nextLine();
-		System.out.println("Enter Name : ");
+		System.out.print("Enter Name : ");
 		name = sc.nextLine();
-		System.out.println("Enter Std : ");
+		System.out.print("Enter Std : ");
 		std = sc.nextInt();
 	}
 	public void update() 
 	{
         sc.nextLine();
-		System.out.println("Enter Name : ");
+		System.out.print("Enter Name : ");
 		name = sc.nextLine();
-		System.out.println("Enter Std : ");
+		System.out.print("Enter Std : ");
 		std = sc.nextInt();
 	}
 	public void disp() 
