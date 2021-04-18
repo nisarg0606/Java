@@ -62,7 +62,7 @@ public class StudentManagement {
                 System.out.println();
                 for (i = 0; i < list.size(); i++) {
                     Student sdisp = list.get(i);
-                    System.out.println(sdisp.getRno() + " " + sdisp.getName() + " " + sdisp.getstd());
+                    System.out.println("Roll no: "+sdisp.getRno() + "\nName: " + sdisp.getName() + "\nStd: " + sdisp.getstd());
                 }
                 System.out.println();
                 break;
