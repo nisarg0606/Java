@@ -75,6 +75,11 @@ public class StudentManagement {
                         System.out.println("Rno: " + sdisp.getRno() + "\nName: " + sdisp.getName() + "\nStd: "
                                 + sdisp.getstd() + "\n");
                         break;
+                    } else if (sname.contentEquals(list.get(i).getName().toLowerCase())) {
+                        Student sdisp = list.get(i);
+                        System.out.println("Rno: " + sdisp.getRno() + "\nName: " + sdisp.getName() + "\nStd: "
+                                + sdisp.getstd() + "\n");
+                        break;
                     }
                     System.out.println("Please enter a valid name....");
                 }
