@@ -8,14 +8,14 @@ package VSITR.CollectionFrameWork;
 import java.util.ArrayList;
 public class MyArrayList {
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("Nisarg");   
-        list.add("Rutvik");   
-        list.add("Sakar");   
-        list.add("Jay");   
-        list.add("Jainam");
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        ArrayList<String> MyarrayList = new ArrayList<String>();
+        MyarrayList.add("Nisarg");   
+        MyarrayList.add("Rutvik");   
+        MyarrayList.add("Sakar");   
+        MyarrayList.add("Jay");   
+        MyarrayList.add("Jainam");
+        for (int i = 0; i < MyarrayList.size(); i++) {
+            System.out.println(MyarrayList.get(i));
         }   
     }
 }

@@ -9,24 +9,24 @@ package VSITR.CollectionFrameWork;
 import java.util.ArrayList;
 public class ExampleArrayList {
     public static void main(String[] args) {
-        ArrayList<Integer> i = new ArrayList<Integer>();
-        i.add(1);
-        i.add(2);
-        i.add(3);
-        i.add(4);
-        i.add(5);
-        for (Integer integer : i) {
+        ArrayList<Integer> ExampleArrayList = new ArrayList<Integer>();
+        ExampleArrayList.add(1);
+        ExampleArrayList.add(2);
+        ExampleArrayList.add(3);
+        ExampleArrayList.add(4);
+        ExampleArrayList.add(5);
+        for (Integer integer : ExampleArrayList) {
             System.out.print(integer+"  ");
         }
         System.out.println();
-        // System.out.println(i);
+        // System.out.println(ExampleArrayList);
         System.out.println("Removing all elements...");
-        i.removeAll(i);
-        if (i.size() == 0)
+        ExampleArrayList.removeAll(ExampleArrayList);
+        if (ExampleArrayList.size() == 0)
             System.out.println("The ArrayList is empty...");
         else
-            for (int j = 0; j < i.size(); j++) {
-                System.out.print(i.get(j));
+            for (int j = 0; j < ExampleArrayList.size(); j++) {
+                System.out.print(ExampleArrayList.get(j));
             }
     }
 }
