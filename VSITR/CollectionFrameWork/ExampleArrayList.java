@@ -3,7 +3,7 @@
     Topic:  7.2 Create an ArrayList with name ExampleArrayList. Add 5 elements of type 
             Integer. Print all the elements of the ArrayList. Now remove all the elements 
             from this ArrayList and print the output.
-    DOE:    19-04-2021
+    DOC:    19-04-2021
 */
 package VSITR.CollectionFrameWork;
 import java.util.ArrayList;

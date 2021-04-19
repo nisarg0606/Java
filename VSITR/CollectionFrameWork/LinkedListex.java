@@ -10,7 +10,7 @@
             LinKedList. Print the updated LinkedList.
             5) Remove all the elements from the LinkedList. Print the updated 
             LinkedList.
-    DOE:    19-04-2021
+    DOC:    19-04-2021
 */
 package VSITR.CollectionFrameWork;
 import java.util.LinkedList;

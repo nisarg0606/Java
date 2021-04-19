@@ -2,7 +2,7 @@
     Author: Nisarg Shah
     Topic:  7.1 Create an ArrayList with name MyArrayList. Add 5 elements of type String. 
             Print all the elements using get().
-    DOE:    19-04-2021
+    DOC:    19-04-2021
 */
 package VSITR.CollectionFrameWork;
 import java.util.ArrayList;

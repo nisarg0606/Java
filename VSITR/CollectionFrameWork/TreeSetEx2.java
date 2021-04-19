@@ -4,7 +4,7 @@
             with value 5 and print the Treeset. Check whether the node has been removed 
             or not. Now remove all the elements from the Treeset and again print the 
             Treeset
-    DOE:    19-04-2021
+    DOC:    19-04-2021
 */
 package VSITR.CollectionFrameWork;
 import java.util.TreeSet;
