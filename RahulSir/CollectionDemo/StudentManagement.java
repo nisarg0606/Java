@@ -62,26 +62,33 @@ public class StudentManagement {
                 System.out.println();
                 for (i = 0; i < list.size(); i++) {
                     Student sdisp = list.get(i);
-                    System.out.println("Roll no: "+sdisp.getRno() + "\nName: " + sdisp.getName() + "\nStd: " + sdisp.getstd());
+                    System.out.println(
+                            "Roll no: " + sdisp.getRno() + "\nName: " + sdisp.getName() + "\nStd: " + sdisp.getstd());
                 }
                 System.out.println();
                 break;
             case 5:
                 System.out.print("Enter the name you want to search for: ");
-                String sname = sc.next();
-                for (i = 0; i < list.size(); i++) {
-                    if (sname.contentEquals(list.get(i).getName())) {
-                        Student sdisp = list.get(i);
-                        System.out.println("Rno: " + sdisp.getRno() + "\nName: " + sdisp.getName() + "\nStd: "
-                                + sdisp.getstd() + "\n");
-                        break;
-                    } else if (sname.contentEquals(list.get(i).getName().toLowerCase())) {
-                        Student sdisp = list.get(i);
-                        System.out.println("Rno: " + sdisp.getRno() + "\nName: " + sdisp.getName() + "\nStd: "
-                                + sdisp.getstd() + "\n");
+                sc.nextLine();
+                String sname = sc.nextLine();
+                boolean flag = false;
+                i = 0;
+                for (; i < list.size(); i++) {
+                    if(sname.equalsIgnoreCase(list.get(i).getName()))
+                    {
+                        flag= true;
                         break;
                     }
-                    System.out.println("Please enter a valid name....");
+                }
+                if(flag)
+                {
+                    System.out.println("The name you searched for is found successfully...");
+                    s = list.get(i);
+                    System.out.println("Roll no: "+s.getRno() +" Name: "+s.getName()+" Std: "+ s.getstd());
+                }
+                else
+                {
+                    System.out.println("Student record not found...");
                 }
                 break;
             case 6:
