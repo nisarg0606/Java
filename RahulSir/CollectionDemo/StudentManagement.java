@@ -39,9 +39,12 @@ public class StudentManagement {
                         break;
                     }
                 }
-                Student updateObj = list.get(i);
-                updateObj.update();
-                list.set(i, updateObj);
+                // Student updateObj = list.get(i);
+                s = list.get(i);
+                // updateObj.update();
+                s.update();
+                // list.set(i, updateObj);
+                list.set(i, s);
                 System.out.println("Student record successfully updated");
                 break;
             case 3:
@@ -61,9 +64,10 @@ public class StudentManagement {
             case 4:
                 System.out.println();
                 for (i = 0; i < list.size(); i++) {
-                    Student sdisp = list.get(i);
+                    // Student sdisp = list.get(i);
+                    s = list.get(i);
                     System.out.println(
-                            "Roll no: " + sdisp.getRno() + "\nName: " + sdisp.getName() + "\nStd: " + sdisp.getstd());
+                            "Roll no: " + s.getRno() + "\nName: " + s.getName() + "\nStd: " + s.getstd());
                 }
                 System.out.println();
                 break;
@@ -74,20 +78,16 @@ public class StudentManagement {
                 boolean flag = false;
                 i = 0;
                 for (; i < list.size(); i++) {
-                    if(sname.equalsIgnoreCase(list.get(i).getName()))
-                    {
-                        flag= true;
+                    if (sname.equalsIgnoreCase(list.get(i).getName())) {
+                        flag = true;
                         break;
                     }
                 }
-                if(flag)
-                {
+                if (flag) {
                     System.out.println("The name you searched for is found successfully...");
                     s = list.get(i);
-                    System.out.println("Roll no: "+s.getRno() +" Name: "+s.getName()+" Std: "+ s.getstd());
-                }
-                else
-                {
+                    System.out.println("Roll no: " + s.getRno() + " Name: " + s.getName() + " Std: " + s.getstd());
+                } else {
                     System.out.println("Student record not found...");
                 }
                 break;

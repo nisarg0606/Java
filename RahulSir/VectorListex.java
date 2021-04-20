@@ -1,4 +1,4 @@
-package RahulSir.CollectionDemo;
+package RahulSir;
 
 import java.util.Iterator;
 import java.util.Vector;
@@ -16,5 +16,7 @@ public class VectorListex {
             String name = it.next();
             System.out.println(name);
         }
+        System.out.println(vObject.capacity());
+        System.out.println(vObject.hashCode());
     }
 }
