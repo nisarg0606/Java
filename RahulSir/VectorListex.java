@@ -1,3 +1,8 @@
+/*
+    Author: Nisarg Shah
+    Topic: Example of vectors for understanding vectors
+    DOC: 20-04-2021
+*/
 package RahulSir;
 
 import java.util.Iterator;
