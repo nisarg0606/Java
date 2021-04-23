@@ -54,7 +54,6 @@ public class ProductManagement {
             case 4:
                 System.out.println();
                 for (i = 0; i < linkedList.size(); i++) {
-                    // Student sdisp = list.get(i);
                     p = linkedList.get(i);
                     System.out.println("Id no: " + p.getId() + " Name: " + p.getName() + " Price: " + p.getPrice());
                 }
@@ -105,7 +104,7 @@ public class ProductManagement {
                 break;
             case 0:
                 System.out.println("Thanks for visiting....");
-                System.exit(0);
+                break;
             default:
                 System.out.println("Enter a valid number...");
                 break;
