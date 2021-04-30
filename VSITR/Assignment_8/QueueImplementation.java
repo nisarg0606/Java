@@ -127,7 +127,7 @@ public class QueueImplementation {
             int choice = sc.nextInt();
             switch (choice) {
             case 1:
-                System.out.print("Enter integer element to insert");
+                System.out.print("Enter integer element to insert: ");
                 lq.insert(sc.nextInt());
                 break;
             case 2:
