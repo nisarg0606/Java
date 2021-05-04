@@ -2,7 +2,7 @@ package RahulSir.Practice;
 
 import java.util.ArrayList;
 
-public class InsertAtspecific {
+public class Q4 {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>();
         list.add("a");
@@ -14,3 +14,7 @@ public class InsertAtspecific {
         System.out.println("After Adding the element ar 2nd position: " + list);
     }
 }
+/*  OUTPUT:
+    Before Adding the element ar 2nd position: [a, b, d, e]
+    After Adding the element ar 2nd position: [a, b, c, d, e]
+*/

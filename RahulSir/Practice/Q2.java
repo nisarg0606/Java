@@ -2,7 +2,7 @@ package RahulSir.Practice;
 
 import java.util.ArrayList;
 
-public class Iterate {
+public class Q2 {
     public static void main(String[] args) {
         ArrayList<String> it = new ArrayList<String>();
         it.add("a");
@@ -16,3 +16,12 @@ public class Iterate {
         }
     }
 }
+/*
+    OUTPUT:
+    a
+    b
+    c
+    d
+    e
+    f
+*/

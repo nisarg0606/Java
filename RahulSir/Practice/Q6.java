@@ -2,7 +2,7 @@ package RahulSir.Practice;
 
 import java.util.ArrayList;
 
-public class Remove3rdElement {
+public class Q6 {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>();
         list.add("a");
@@ -15,3 +15,8 @@ public class Remove3rdElement {
         System.out.println("After removing 3rd element: "+list);
     }
 }
+/*
+OUTPUT:
+    Before removing 3rd element: [a, b, c, d, f]
+    After removing 3rd element: [a, b, c, f]
+*/

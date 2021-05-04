@@ -2,7 +2,7 @@ package RahulSir.Practice;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-public class SearchAnElement {
+public class Q7 {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>();
         list.add("a");
@@ -31,3 +31,8 @@ public class SearchAnElement {
         }
     }
 }
+/*
+OUTPUT:
+    Enter an element you want to search for: b
+    b founded at index 1
+*/

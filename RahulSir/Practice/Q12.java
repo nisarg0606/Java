@@ -1,9 +1,8 @@
 package RahulSir.Practice;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
-public class ShuffleElements {
+public class Q12 {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>();
         list.add("Nisarg");
@@ -11,10 +10,16 @@ public class ShuffleElements {
         list.add("Sahil");
         list.add("Pavan");
         list.add("Amiraj");
-        System.out.println("Before Shuffling: ");
+        System.out.println("Complete list: ");
         System.out.println(list);
-        Collections.shuffle(list);
-        System.out.println("After Shuffling: ");
-        System.out.println(list);
+        System.out.println("Portion of a list: ");
+        System.out.println(list.subList(0, 3));
     }
 }
+/*
+OUTPUT:
+    Complete list: 
+    [Nisarg, Japan, Sahil, Pavan, Amiraj]
+    Portion of a list:
+    [Nisarg, Japan, Sahil]
+*/

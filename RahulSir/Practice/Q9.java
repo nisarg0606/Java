@@ -2,7 +2,7 @@ package RahulSir.Practice;
 
 import java.util.ArrayList;
 
-public class CopyOneArrayToAnother {
+public class Q9 {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>();
         list.add("Nisarg");
@@ -19,3 +19,9 @@ public class CopyOneArrayToAnother {
         System.out.println(listcopy);
     }
 }
+/*
+OUTPUT:
+    [Nisarg, Japan, Sahil, Pavan, Amiraj]
+    After Coping: 
+    [Nisarg, Japan, Sahil, Pavan, Amiraj]
+*/

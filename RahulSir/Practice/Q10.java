@@ -3,7 +3,7 @@ package RahulSir.Practice;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ReverseElements {
+public class Q10 {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>();
         list.add("Nisarg");
@@ -11,10 +11,17 @@ public class ReverseElements {
         list.add("Sahil");
         list.add("Pavan");
         list.add("Amiraj");
-        System.out.println("Before Reversing: ");
+        System.out.println("Before Shuffling: ");
         System.out.println(list);
-        Collections.reverse(list);
-        System.out.println("After Reversing: ");
+        Collections.shuffle(list);
+        System.out.println("After Shuffling: ");
         System.out.println(list);
     }
 }
+/*
+OUTPUT:
+    Before Shuffling: 
+    [Nisarg, Japan, Sahil, Pavan, Amiraj]
+    After Shuffling:
+    [Pavan, Sahil, Amiraj, Japan, Nisarg]
+*/

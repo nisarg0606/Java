@@ -1,7 +1,7 @@
 package RahulSir.Practice;
 import java.util.ArrayList;
 import java.util.Collections;
-public class SortArr {
+public class Q8 {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>();
         list.add("Nisarg");
@@ -18,3 +18,18 @@ public class SortArr {
             System.out.println(str);
     }
 }
+/*
+OUTPUT:
+    Before Sorting: 
+    Nisarg
+    Japan
+    Sahil
+    Pavan
+    Amiraj
+    After Sorting:
+    Amiraj
+    Japan
+    Nisarg
+    Pavan
+    Sahil
+*/

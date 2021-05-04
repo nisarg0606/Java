@@ -2,7 +2,7 @@ package RahulSir.Practice;
 
 import java.util.ArrayList;
 
-public class Compare2ArrayList {
+public class Q13 {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>();
         list.add("Nisarg");
@@ -26,3 +26,11 @@ public class Compare2ArrayList {
         System.out.println(compare);
     }
 }
+/*
+OUTPUT:
+    [Nisarg, Japan, Sahil, Pavan, Amiraj]
+    Before Adding xyz comparing list: 
+    true
+    After Adding xyz comparing list:
+    false
+*/
