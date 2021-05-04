@@ -1,8 +1,8 @@
-package RahulSir;
+package RahulSir.ComparatorAndComparable;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
+//this is by comarable
 public class SortByStd {
     public static void main(String[] args) {
         Student s1 = new Student(1,"Nisarg",12);

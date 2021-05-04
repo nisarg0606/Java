@@ -1,9 +1,9 @@
-package RahulSir;
+package RahulSir.ComparatorAndComparable;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class SortByName {
+public class ComparatorImplementation {
     public static void main(String[] args) {
         Student s1 = new Student(1,"Nisarg",12);
         Student s4 = new Student(4,"Pavan",11);
@@ -18,8 +18,14 @@ public class SortByName {
             Student s  =list.get(i);
             System.out.println(s);
         }
-        Collections.sort(list);
-        System.out.println("After Sorting: ");
+        Collections.sort(list, new NameWiseStudentComparator());
+        System.out.println("After Sorting by Name: ");
+        for (int i = 0; i < list.size(); i++) {
+            Student s  =list.get(i);
+            System.out.println(s);
+        }
+        Collections.sort(list, new StdWiseStudentComparator());
+        System.out.println("After Sorting by std: ");
         for (int i = 0; i < list.size(); i++) {
             Student s  =list.get(i);
             System.out.println(s);

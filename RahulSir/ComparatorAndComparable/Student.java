@@ -1,4 +1,4 @@
-package RahulSir;
+package RahulSir.ComparatorAndComparable;
 import java.util.Scanner;
 public class Student implements Comparable<Student>{
     private int rno;
@@ -83,3 +83,6 @@ public class Student implements Comparable<Student>{
 	}
     
 }
+
+//comparable 1 thing at a time
+//comparator multiple scope thing at a time
