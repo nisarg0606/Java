@@ -1,10 +1,13 @@
 package RahulSir.ComparatorAndComparable;
+
 import java.util.Scanner;
-public class Student implements Comparable<Student>{
+
+public class Student implements Comparable<Student> {
     private int rno;
     private String name;
     private int std;
     Scanner sc = new Scanner(System.in);
+
     public Student() {
     }
 
@@ -38,28 +41,28 @@ public class Student implements Comparable<Student>{
         this.std = std;
     }
 
-    public void scan() 
-	{
-		System.out.print("Enter Rno : ");
-		rno = sc.nextInt();
-		sc.nextLine();
-		System.out.print("Enter Name : ");
-		name = sc.nextLine();
-		System.out.print("Enter Std : ");
-		std = sc.nextInt();
-	}
-	public void update() 
-	{
+    public void scan() {
+        System.out.print("Enter Rno : ");
+        rno = sc.nextInt();
         sc.nextLine();
-		System.out.print("Enter Name : ");
-		name = sc.nextLine();
-		System.out.print("Enter Std : ");
-		std = sc.nextInt();
-	}
-	public void disp() 
-	{
-		System.out.println(rno + " " + name + " " + std);
-	}
+        System.out.print("Enter Name : ");
+        name = sc.nextLine();
+        System.out.print("Enter Std : ");
+        std = sc.nextInt();
+    }
+
+    public void update() {
+        sc.nextLine();
+        System.out.print("Enter Name : ");
+        name = sc.nextLine();
+        System.out.print("Enter Std : ");
+        std = sc.nextInt();
+    }
+
+    public void disp() {
+        System.out.println(rno + " " + name + " " + std);
+    }
+
     @Override
     public String toString() {
         return rno + " " + name + " " + std;
@@ -67,22 +70,21 @@ public class Student implements Comparable<Student>{
 
     @Override
     // public int compareTo(Student s) {
-    //     if (std > s.std) {
-    //         return 1;
-    //     }else if(std < s.std){
-    //         return -1;
-    //     }
-    //     else{
-    //         return 0;
-    //     }
+    // if (std > s.std) {
+    // return 1;
+    // }else if(std < s.std){
+    // return -1;
+    // }
+    // else{
+    // return 0;
+    // }
     // }
     // @Override
-	public int compareTo(Student s) 
-	{
-		return name.compareTo(s.name);
-	}
-    
+    public int compareTo(Student s) {
+        return name.compareTo(s.name);
+    }
+
 }
 
-//comparable 1 thing at a time
-//comparator multiple scope thing at a time
+// comparable 1 thing at a time
+// comparator multiple scope thing at a time

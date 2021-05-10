@@ -2,15 +2,14 @@ package RahulSir.ComparatorAndComparable;
 
 import java.util.Comparator;
 
-public class StdWiseStudentComparator implements Comparator<Student>{
+public class StdWiseStudentComparator implements Comparator<Student> {
     @Override
-    public int compare(Student s1, Student s2)
-    {
-        if(s1.getstd() > s2.getstd())
+    public int compare(Student s1, Student s2) {
+        if (s1.getstd() > s2.getstd())
             return 1;
-        else if(s1.getstd() < s2.getstd())
+        else if (s1.getstd() < s2.getstd())
             return -1;
-        else 
+        else
             return 0;
     }
 }
