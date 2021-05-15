@@ -1,5 +1,5 @@
 package RahulSir.MultiThreadingWithSync;
-
+//this class is made just to run and see how sync works
 public class MainRunnableClass {
     public static void main(String[] args) {
         Table resource = new Table();
