@@ -1,5 +1,5 @@
 package RahulSir.MultiThreadingWithSync;
-//this class is for table
+//this class is for table which is a syncronized method
 public class Table {
 	public synchronized void printTable(int no) {
 		for (int i = 1; i <= 10; i++) {
