@@ -1,7 +1,7 @@
 package RahulSir.jdbcdemo;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
+// import java.sql.ResultSet;
 import java.sql.SQLException;
 public class DbConnection {
     // 1) ready with credential
@@ -25,11 +25,11 @@ public class DbConnection {
 				System.out.println("Db Connected : " + conn);
 			} else 
 			System.out.println("Db not Connected : " + conn);
-			java.sql.Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("Select Name from Country where population < 10000");
-			while (rs.next()) {
-				System.out.println(rs.getString(1));
-			}
+			// java.sql.Statement stmt = conn.createStatement();
+			// ResultSet rs = stmt.executeQuery("Select Name from Country where population < 10000");
+			// while (rs.next()) {
+			// 	System.out.println(rs.getString(1));
+			// }
 			conn.close();
 		} catch (ClassNotFoundException e) 
 		{
