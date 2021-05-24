@@ -9,6 +9,9 @@ public class StudentBean {
     private Float Science;
     private Float Total;
 
+    public StudentBean() {
+    }
+
     public StudentBean(int rno, String name, String std, Float sS, Float maths, Float science, Float total) {
         this.rno = rno;
         this.name = name;
@@ -82,5 +85,11 @@ public class StudentBean {
 
     public void setTotal(Float total) {
         Total = total;
+    }
+
+    @Override
+    public String toString() {
+        return "Rollno: " + rno + "  Name: " + name + "  Std: " + std + "\nSS Marks: " + SS + "\nMaths Marks: " + Maths
+                + "\nScience Marks: " + Science + "\nTotal: " + Total + "\n\n";
     }
 }
