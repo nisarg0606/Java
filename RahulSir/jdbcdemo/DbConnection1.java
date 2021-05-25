@@ -1,33 +1,24 @@
 package RahulSir.jdbcdemo;
-import java.io.FileInputStream;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 // import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
 
-public class DbConnection {
+public class DbConnection1 {
 	// 1) ready with credential
-	public static Connection getConnection() {
-		FileInputStream fin = null;
-		Properties prop = new Properties();
-		try {
-			fin = new FileInputStream("RahulSir\\jdbcdemo\\config.properties");
-			prop.load(fin);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	private static final String URLNAME = "jdbc:mysql://localhost:3309/student_data";
+	private static final String DRIVERCLASS = "com.mysql.cj.jdbc.Driver";
+	private static final String USERNAME = "root";
+	private static final String PASSWORD = "nisarg";
 
-		String urlname=prop.getProperty("URLNAME").trim();
-		String driverclass=prop.getProperty("DRIVERCLASS").trim();
-		String username=prop.getProperty("USERNAME").trim();
-		String password=prop.getProperty("PASSWORD").trim();
+	public static Connection getConnection() {
 		Connection conn = null;
 		try {
 			// 2) Load driver class
-			Class.forName(driverclass);
+			Class.forName(DRIVERCLASS);
 			// 3) pass creedential into DriverManager's getConnection Method
-			conn = DriverManager.getConnection(urlname, username, password);
+			conn = DriverManager.getConnection(URLNAME, USERNAME, PASSWORD);
 			// 4) validate connection object
 			if (conn != null) {
 				// System.out.println("Db Connected : " + conn);

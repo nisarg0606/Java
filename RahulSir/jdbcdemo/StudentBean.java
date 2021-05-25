@@ -89,7 +89,7 @@ public class StudentBean {
 
     @Override
     public String toString() {
-        return "Rollno: " + rno + "  Name: " + name + "  Std: " + std + "\nSS Marks: " + SS + "\nMaths Marks: " + Maths
-                + "\nScience Marks: " + Science + "\nTotal: " + Total + "\n\n";
+        return "Rollno: " + rno + "     Name: " + name + "      Std: " + std + "        SS Marks: " + SS + "        Maths Marks: " + Maths
+                + "     Science Marks: " + Science + "      Total: " + Total + "\n";
     }
 }

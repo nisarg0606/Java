@@ -71,6 +71,24 @@ public class StudentDaoDynamic {
         return rowsEffected;
     }
 
+    public int AutoIncrementReset(int rno) {
+        Statement stmt = null;
+        Connection conn = DbConnection.getConnection();
+        int rowsEffected = 0;
+        String AlterAutoIncrement = "ALTER TABLE student AUTO_INCREMENT = " + rno;
+        if (conn != null) {
+            try {
+                stmt = conn.createStatement();
+                rowsEffected = stmt.executeUpdate(AlterAutoIncrement);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("StudentDao - AutoIncrementReset() ---> Db not connected : " + conn);
+        }
+        return rowsEffected;
+    }
+
     public static ArrayList<StudentBean> getAllStudentsrecords() {
         ArrayList<StudentBean> list = new ArrayList<StudentBean>();
         Connection conn = DbConnection.getConnection();
@@ -110,6 +128,7 @@ public class StudentDaoDynamic {
             System.out.println("2 --- Update");
             System.out.println("3 --- Delete");
             System.out.println("4 --- Display all records");
+            System.out.println("5 --- Change AutoIncrement");
             System.out.println("0 --- Exit");
             System.out.print("Enter what you want to perform: ");
             choice = sc.nextInt();
@@ -179,6 +198,17 @@ public class StudentDaoDynamic {
                     }
                     if (list.size() == 0) {
                         System.out.println("The Databse is empty.... Please insert some data to view the results");
+                    }
+                    break;
+                case 5:
+                    System.out.print("Enter from which Rno you want to reset autoincrement: ");
+                    s = new StudentDaoDynamic();
+                    rno = sc.nextInt();
+                    rowsAffected = s.AutoIncrementReset(rno);
+                    if (rowsAffected == 0) {
+                        System.out.println(rowsAffected + " Auto Increment reseted successfully.");
+                    } else {
+                        System.out.println(rowsAffected + " Auto Increment not at all reseted. Please enter a valid number.");
                     }
                     break;
                 case 0:
