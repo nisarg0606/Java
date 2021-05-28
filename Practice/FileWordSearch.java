@@ -17,8 +17,10 @@ public class FileWordSearch {
       while ((s = br.readLine()) != null) // Reading Content from the file
       {
          words = s.split(" "); // Split the word using space
-         for (String word : words) {
-            if (word.equals(input)) // Search for the given word
+         // for (String word : words)
+         for (int i = 0; i < words.length; i++)
+         {
+            if (words[i].equals(input)) // Search for the given word
             {
                count++; // If Present increase the count by one
             }
