@@ -194,8 +194,8 @@ public class StudentDaoPreparedStatement {
                 default:
                     System.out.println("Please enter a valid choice.....");
                     break;
-                }
             }
-            sc.close();
+        }
+        sc.close();
     }
 }
