@@ -109,6 +109,37 @@ public class StudentDaoPreparedStatement {
         return list;
     }
 
+    public static ArrayList<StudentBean> getStudentsrecord(int rno) {
+        ArrayList<StudentBean> list = new ArrayList<StudentBean>();
+        Connection conn = DbConnection.getConnection();
+        Statement stmt = null;
+        String selectQuery = "SELECT rno,name,std,ss,maths,science,total FROM student where rno = " + rno;
+        ResultSet rs = null;
+        StudentBean sbean = null;
+        if (conn != null) {
+            try {
+                stmt = conn.createStatement();
+                rs = stmt.executeQuery(selectQuery);
+                while (rs.next()) {
+                    sbean = new StudentBean();
+                    sbean.setRno(rs.getInt(1));
+                    sbean.setName(rs.getString(2));
+                    sbean.setStd(rs.getString(3));
+                    sbean.setSS(rs.getFloat(4));
+                    sbean.setMaths(rs.getFloat(5));
+                    sbean.setScience(rs.getFloat(6));
+                    sbean.setTotal(rs.getFloat(7));
+                    list.add(sbean);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("StudentDaoPreparedStatement - select() ---> Db not connected : " + conn);
+        }
+        return list;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int choice = 1;
@@ -117,6 +148,7 @@ public class StudentDaoPreparedStatement {
             System.out.println("2 --- Update");
             System.out.println("3 --- Delete");
             System.out.println("4 --- Display all records");
+            System.out.println("5 --- Display record by rno");
             System.out.println("0 --- Exit");
             System.out.print("Enter what you want to perform: ");
             choice = sc.nextInt();
@@ -185,7 +217,21 @@ public class StudentDaoPreparedStatement {
                         System.out.println(sbean);
                     }
                     if (list.size() == 0) {
-                        System.out.println("The Databse is empty.... Please insert some data to view the results");
+                        System.out.println("The Database is empty.... Please insert some data to view the results");
+                    }
+                    break;
+                case 5:
+                    System.out.println("Enter the rollno you want data of: ");
+                    rno = sc.nextInt();
+                    s = new StudentDaoPreparedStatement();
+                    list = StudentDaoPreparedStatement.getStudentsrecord(rno);
+                    sbean = null;
+                    for (int i = 0; i < list.size(); i++) {
+                        sbean = list.get(i);
+                        System.out.println(sbean);
+                    }
+                    if (list.size() == 0) {
+                        System.out.println("The Database is empty.... Please insert some data to view the results");
                     }
                     break;
                 case 0:
