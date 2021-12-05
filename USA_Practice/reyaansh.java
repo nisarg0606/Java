@@ -1,3 +1,5 @@
+package USA_Practice;
+
 import java.util.Scanner;
 
 class reyaansh {
