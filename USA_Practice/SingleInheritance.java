@@ -1,13 +1,13 @@
 package USA_Practice;
 
-class Animal {
+class Animal1 {
     void eat() {
         System.out.println("Animal is eating");
     }
 }
 
 
-class Dog extends Animal
+class Dog1 extends Animal1
 {
     void bark()
     {
@@ -20,7 +20,7 @@ class Dog extends Animal
  */
 public class SingleInheritance {
     public static void main(String[] args) {
-        Dog d = new Dog();
+        Dog1 d = new Dog1();
         d.eat();
         d.bark();
     }
