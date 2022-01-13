@@ -1,0 +1,47 @@
+
+JVM---->
+JVM is known as Java Virtual Machine. 
+It is called a virtual machine because it doesn't physically exist.
+It is a specification that provides a runtime environment in which Java bytecode can be executed. 
+It can also run those programs which are written in other languages and compiled to Java bytecode.
+
+The JVM performs the following main tasks:
+
+Loads code
+Verifies code
+Executes code
+Provides runtime environment
+
+
+JRE-->
+Java Runtime Environment
+JVM is a part of JRE
+It provides libraries for running our java code
+eg. jar files
+
+
+
+JDK-->
+JDK stands for Java Development Kit.
+The Java Development Kit (JDK) is a software development environment which is 
+used to develop Java applications and applets.
+It physically exists.
+It contains JRE + development tools.
+
+
+
+
+Types of Varibles in Java
+
+3 types of Varibles
+local Varible
+instance Varible
+static Varible
+
+
+what is Varible??
+A variable is the name of a reserved area allocated in memory.
+In other words, it is a name of the memory location. 
+It is a combination of "vary + able" which means its value can be changed.
+
+int a = 50; --> Here a is a Varible where 50 is stored.
