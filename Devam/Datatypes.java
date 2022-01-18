@@ -1,19 +1,23 @@
 package Devam;
-
+// there can be n number of classes in java file but there will be only one public class in a 
+//file and that class name should be similar to file name.
+//for example: if file name is Datatypes then public class name should also be Datatypes
 public class Datatypes {
     public static void main(String[] args) {
-        //how many data typwe are there in java?
-        //1. byte
-        //2. short
-        //3. int
-        //4. long
-        //5. float
-        //6. double
-        //7. char
-        //8. boolean
-        //9. String
-        //byte < short < int < long < float < double < char < boolean < String
-        int a = 10, b = 5, c = 30, d = 50;
+        /* multiline comment
+        how many data types are there in java?
+        1. byte
+        2. short
+        3. int
+        4. long
+        5. float
+        6. double
+        7. char
+        8. boolean
+        9. String
+        byte < short < int < long < float < double < char < boolean < String
+        */
+        int a = 10, b = 5, c = 30, d = 50;// single line comment
         float f = 10.5f, g = 5.5f, h = 30.5f, i = 50.5f;// float can provide precision upto 6 digits
         double e = 10.5, j = 5.5, k = 30.5, l = 50.5;// double can provide precision upto 15 digits
         short s = 10, t = 5, u = 30, v = 50;// short can store values upto 32 bits
