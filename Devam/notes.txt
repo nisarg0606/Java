@@ -45,3 +45,36 @@ In other words, it is a name of the memory location.
 It is a combination of "vary + able" which means its value can be changed.
 
 int a = 50; --> Here a is a Varible where 50 is stored.
+
+
+Monday Wednesay Friday --> Jaynam Sir
+TTS -> Nisarg Shah
+Java Control Statements: 
+
+
+Java Operators:
+1. Arithmetic Operators --> + - * / % ++ -- 
+2. Relational Operators --> == >= <= != > < 
+
+
+
+Java provides 3 types of control flow Statements.
+1. Decision making Statements
+    a. if Statements
+    b. switch Statements
+
+2. Loop Statements
+    a.
+    b.
+    c.
+    d.
+
+3. Jump Statements
+    a.
+    b.
+
+
+
+Switch Case??
+Switch Statement in java is used to execute one statement from Multiple conditions.
+It is similar to the if-else ladder 
