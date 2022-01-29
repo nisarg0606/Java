@@ -23,3 +23,39 @@ public class IfelsePractice {
         }
     }
 }
+//max number between 2 numbers
+/*
+input: Enter 2 numbers:
+    5 10
+    10 10
+    Output:
+    The Maximum Number from 2 numbers is: 10
+    a,b
+    if a > b
+            print-> a is bigger than b
+    else if a == b
+            both of them are equal
+    else
+            b is bigger than a
+*/
+
+class FindMaxofTwo{
+    public static void main(String[] args) {
+        System.out.println("Enter two numbers: ");
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        if(a > b)
+        {
+            System.out.println("A is Greater than B");
+        }
+        else if(a == b)
+        {
+            System.out.println("Both The Numbers are same");
+        }
+        else{
+            System.out.println("B is greater than A");
+        }
+    }
+}
