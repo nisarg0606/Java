@@ -35,6 +35,5 @@ public class StringComparision {
         {
             System.out.println("Both the Strings are not equal");
         }
-        
     }
 }
