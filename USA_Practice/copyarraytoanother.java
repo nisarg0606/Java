@@ -11,7 +11,7 @@ public class copyarraytoanother {
             System.out.println("Enter the " + (i + 1) + " element of the array: ");
             a[i] = sc.nextInt();
         }
-        // for (int i = 0; i < a.length; i++) {
+        // for (int i = 0; i < a.length; i++) {// copy elements in same manner
         // b[i] = a[i];
         // }
         int j = 0;
