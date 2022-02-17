@@ -59,3 +59,33 @@ class FindMaxofTwo{
         }
     }
 }
+
+// take a number from the user and you should let him know if number is +ve, -ve or 0(neutal)
+/*
+int a
+Enter a number:
+5
+Positive Number
+-10
+Negative number
+0
+Neutral number i.e. 0
+*/
+
+class NumberCheck{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        if(a > 0)
+        {
+            System.out.println("The number is Positive....");
+        }
+        else if(a < 0)
+        {
+            System.out.println("The number is Negative");
+        }
+        else{
+            System.out.println("The number is 0");
+        }
+    }
+}
