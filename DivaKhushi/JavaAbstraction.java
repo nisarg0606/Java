@@ -18,7 +18,7 @@ package DivaKhushi;
             e. It also can have final methods which will force the subclass not to change the body of the method
             */
 
-abstract class Bike {
+abstract class Bike1234 {
     int speed;
     String name;
     abstract void running();
@@ -27,14 +27,14 @@ abstract class Bike {
     // }
 }
 
-class Honda4 extends Bike {
+class Honda4 extends Bike1234 {
     void running() {
         speed = 10;
         System.out.println("Running Safely....");
     }
 
     public static void main(String[] args) {
-        Bike obj = new Honda4();
+        Bike1234 obj = new Honda4();
         obj.running();
     }
 }
