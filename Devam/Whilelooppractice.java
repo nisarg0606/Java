@@ -15,3 +15,32 @@ public class Whilelooppractice {
         }
     }
 }
+
+class SquareofNumbers {
+    public static void main(String[] args) {
+        System.out.print("Enter a number you want square of: ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        while (n != 0) {
+            System.out.println("The square of the number " + n + " is: " + n * n);
+            n--;
+        }
+    }
+}
+
+
+class SquareofNumbersDynamic{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the starting value: ");
+        int starting = sc.nextInt();
+        System.out.print("Enter the ending value: ");
+        int ending = sc.nextInt();
+        int i = starting;
+        while(i >= starting && i <= ending)
+        {
+            System.out.println("The square of the number " + i + " is: " + i * i);
+            i++;
+        }
+    }
+}
