@@ -27,8 +27,6 @@ class SquareofNumbers {
         }
     }
 }
-
-
 class SquareofNumbersDynamic{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -41,6 +39,14 @@ class SquareofNumbersDynamic{
         {
             System.out.println("The square of the number " + i + " is: " + i * i);
             i++;
-        }
+        }//while loop completed
+        
+        i = starting;
+        System.out.println();
+        System.out.println("Using Do...While loop");
+        do{
+            System.out.println("The square of the number " + i + " is: " + i * i);
+            i++;
+        }while(i >= starting && i <= ending);
     }
 }
