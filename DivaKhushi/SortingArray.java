@@ -31,16 +31,16 @@ public class SortingArray {
         System.out.println("\nAfter Sorting in ascending order....");
         for (int i : arr)
             System.out.print(i + "    ");
-        // for (int i = 0; i < arr.length; i++) {
-        //     for (int j = i + 1; j < arr.length; j++) {
-        //         if (arr[i] < arr[j]) {
-        //             int temp = arr[i];
-        //             arr[i] = arr[j];
-        //             arr[j] = temp;
-        //         }
-        //     }
-        // }
-        Arrays.sort(arr, Collections.reverseOrder());
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        // Arrays.sort(arr, Collections.reverseOrder());
         System.out.println("\nAfter Sorting in Descending order....");
         for (int i : arr)
             System.out.print(i + "    ");
