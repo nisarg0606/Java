@@ -19,11 +19,11 @@ public class HotelMenu {
                 case 1:
                     System.out.println("you selected Indian");
                     System.out.println("No      Item           Price");
-                    System.out.println("1       Lassi          30");
-                    System.out.println("2       Paneer        75");
-                    System.out.println("3       khichidi       55");
-                    System.out.println("4       patartha       120");
-                    System.out.println("5       Dal Makhani   60");
+                    System.out.println("1       Lassi           30");
+                    System.out.println("2       Paneer          75");
+                    System.out.println("3       khichidi        55");
+                    System.out.println("4       patartha        120");
+                    System.out.println("5       Dal Makhani     60");
                     System.out.println(" --------0 to Exit-----");
                     System.out.println("Enter your choice: ");
                     choice = sc.nextInt();
