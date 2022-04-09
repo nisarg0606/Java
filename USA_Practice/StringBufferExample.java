@@ -47,9 +47,6 @@ public class StringBufferExample {
         System.out.println(stringBuffer);
 
         // take a array of Strings
-        // convert element into string
-        
-        // convert them back to int 
         // store it in another array
         // display it
 
