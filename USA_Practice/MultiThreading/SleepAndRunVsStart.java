@@ -16,8 +16,10 @@ public class SleepAndRunVsStart implements Runnable {
     public static void main(String[] args) {
         SleepAndRunVsStart t1 = new SleepAndRunVsStart();
         Thread th1 = new Thread(t1);
+        th1.setPriority(10);
         SleepAndRunVsStart t2 = new SleepAndRunVsStart();
         Thread th2 = new Thread(t2);
+        th2.setPriority(1);
         th1.start();
         th2.start();
     }
