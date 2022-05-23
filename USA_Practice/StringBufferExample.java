@@ -1,5 +1,6 @@
 package USA_Practice;
 
+// non - synchronize / not Thread safe
 public class StringBufferExample {
     public static void main(String[] args) {
         // String vs String Buffer
