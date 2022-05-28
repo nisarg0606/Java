@@ -78,3 +78,35 @@ Java provides 3 types of control flow Statements.
 Switch Case??
 Switch Statement in java is used to execute one statement from Multiple conditions.
 It is similar to the if-else ladder 
+
+Access Modifiers:
+Public 
+Private
+Protected
+Default
+
+Difference between Default and public Access Modifiers 
+OOPS:
+Object oriented Programming System
+
+Object
+Class
+Inheritance
+Polymorpism
+Encaplutation
+
+Why do we require Inheritance????
+I don't want repeat myself, I do want to reuse my code, I want my code to look simple, I want to code less
+I want my code to be more efficient..
+
+
+Types of Inheritance-
+1. Single Level Inheritance
+2. Multilevel Level Inheritance
+3. Multiple Level Inheritance // not supported by java
+4. Hirerichical Inheritance
+5. Hybrid Inheritance
+
+
+1. Single Level Inheritance
+        Suppose, their is a class Called a
