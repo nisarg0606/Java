@@ -108,5 +108,4 @@ Types of Inheritance-
 5. Hybrid Inheritance
 
 
-1. Single Level Inheritance
-        Suppose, their is a class Called a
+
