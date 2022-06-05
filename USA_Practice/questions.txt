@@ -58,7 +58,7 @@ Till both loops are completed.
 	output:	Please enter atleast 2 characters.
 	input 5: Milan_2006
 	output:  Please enter numbers and characters only.
-			
+
 Hint: you need to use counters and also you need to get character by character to check that. Also, you need to create 
 boolean functions like is_Letter and is_Number if not than return please enter numbers and characters only
 
