@@ -15,7 +15,6 @@ public class Valid {
                 System.out.print(" is a valid password.");
                 System.exit(0);
             }
-            sc.close();
         }
     }
 
