@@ -1,0 +1,65 @@
+In today's session you need to perform this codes
+
+1) Write a Java program to read a given string and if the first or last characters are same return the string without those characters otherwise return the 
+string unchanged.
+(Try using both String methods and StringBuffer/Builder)
+	Sample Output:
+
+	The given strings is: testcricket
+	The new string is: estcricke
+
+2) Write a Java program to read a string and return the string without the first two characters. Keep the first character if it is 'g' and keep the 
+second character if it is 'h'.
+
+Sample Output:
+
+The given strings is: goat
+The new string is: gat
+
+he given strings is: photo
+The new string is: hoto
+
+The given strings is: ghost
+The new string is: ghost
+
+
+
+3) Write a Java program to read a string,if the string begins with "red" or "black" return that color string, otherwise return the empty string.
+
+Sample Output:
+
+The given strings is: blacksea
+The string begins with the color: black
+
+05/06/2022
+1) Write a program to Find all Pairs of elements in an array whose sum is equal to a specified number.
+example input:  
+		Array: {2, 7, 4, -5, 11, 5, 20}
+		Specified Number: 15
+	output:
+		4 + 11 = 15
+		-5 + 20 = 15
+HINT: you need use nested for loop and check all compability.
+Step 1,2, till length of array: 1st number and 2nd number , 1st number and 3rd number, 1st and 4th number and so on till last.
+Next Step: 2nd and 3rd, 2nd and 4th, 2nd and 5th and so on till last number.
+Till both loops are completed.
+
+2) Write a program to check the following conditions in the password.
+	1. A password must have at least eight characters.
+	2. A password consists of only letters and digits.
+	3. A password must contain at least two digits and at least two letters/characters.
+	input1:	reyaansh
+	output:	Please enter atleast 2 numbers.
+	input2:	soham
+	output:	Please enter a valid length.
+	input 3: Nidish2004
+	output:	Nidish2004 is a valid password.
+	input 4: M200595493
+	output:	Please enter atleast 2 characters.
+	input 5: Milan_2006
+	output:  Please enter numbers and characters only.
+			
+Hint: you need to use counters and also you need to get character by character to check that. Also, you need to create 
+boolean functions like is_Letter and is_Number if not than return please enter numbers and characters only
+
+	
