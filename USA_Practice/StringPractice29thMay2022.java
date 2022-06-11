@@ -24,6 +24,7 @@ public class StringPractice29thMay2022 {
             System.out.println(
                     "The First and the last character of string is not same so the string will be: " + stringBuffer);
         }
+        sc.close();
     }
 }
 
