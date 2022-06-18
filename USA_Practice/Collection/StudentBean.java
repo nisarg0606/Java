@@ -51,7 +51,13 @@ public class StudentBean {
         System.out.println("Enter your rollno: ");
         rollNo = sc.nextInt();
     }
-
+    public void update()
+    {
+        System.out.println("Enter yout Name: ");
+        name = sc.next();
+        System.out.println("Enter your age: ");
+        age = sc.nextInt();
+    }
     public void display() {
         System.out.println("Name : " + name);
         System.out.println("Roll no: " + rollNo);
