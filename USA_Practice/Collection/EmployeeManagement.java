@@ -97,3 +97,17 @@ public class EmployeeManagement {
 
     }
 }
+
+// Product id
+// product name
+// product category --> Add Category --> if category not present in the list then
+// program need to print category doesn't exist and you need to ask to add that category
+// product Price
+// delete product
+// update product
+// show product by id or name
+// show all products
+
+// get all categories
+// delete category
+// update category
