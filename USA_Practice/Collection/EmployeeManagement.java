@@ -38,19 +38,23 @@ public class EmployeeManagement {
                     int empId = sc.nextInt();
                     // i = 0;
                     // for (; i < arrayList.size(); i++) {
-                    //     if (empId == arrayList.get(i).getEmpId()) {
-                    //         break;
-                    //     }
+                    // if (empId == arrayList.get(i).getEmpId()) {
+                    // break;
+                    // }
                     // }
                     i = employeeBean.UseEmpID(arrayList, empId);
-                    // get the data from the i th index and store it in employeeBean
-                    employeeBean = arrayList.get(i);
-                    // you need to call the employeeBean.update method which will update things for
-                    // us
-                    employeeBean.update();
-                    arrayList.set(i, employeeBean);
-                    System.out.println("Employee Updated Successfully");
-                    employeeBean.display();
+                    if (i == 0) {
+                        System.out.println("No Records found...");
+                    } else {
+                        // get the data from the i th index and store it in employeeBean
+                        employeeBean = arrayList.get(i);
+                        // you need to call the employeeBean.update method which will update things for
+                        // us
+                        employeeBean.update();
+                        arrayList.set(i, employeeBean);
+                        System.out.println("Employee Updated Successfully");
+                        employeeBean.display();
+                    }
                     break;
                 // Delete Employee By Employee id
                 case 3:
@@ -73,19 +77,39 @@ public class EmployeeManagement {
                     break;
                 // Get Employee By ID
                 case 5:
+                    int flag = 0;
                     System.out.println("Enter empid you want to Get: ");
                     empId = sc.nextInt();
                     i = 0;
                     for (; i < arrayList.size(); i++) {
                         if (empId == arrayList.get(i).getEmpId()) {
+                            flag = 1;
                             break;
                         }
                     }
-                    employeeBean = arrayList.get(i);
-                    System.out.println(employeeBean);
+                    if (flag == 1) {
+                        employeeBean = arrayList.get(i);
+                        System.out.println(employeeBean);
+                    } else {
+                        System.out.println("No Records Found...");
+                    }
                     break;
                 case 6:
-                    
+                    System.out.println("Enter Position you want to seach for: ");
+                    String position = sc.next().trim();
+                    i = 0;
+                    flag = 0;
+                    for (; i < arrayList.size(); i++) {
+                        if (position == arrayList.get(i).getPositon()) {
+                            flag = 1;
+                            employeeBean = arrayList.get(i);
+                            System.out.println(employeeBean);
+                            // break;
+                        }
+                    }
+                    if (flag == 0) {
+                        System.out.println("No Records Found...");
+                    }
                     break;
                 case 7:
                     System.out.println("Thanks for Visiting....");
@@ -100,8 +124,10 @@ public class EmployeeManagement {
 
 // Product id
 // product name
-// product category --> Add Category --> if category not present in the list then
-// program need to print category doesn't exist and you need to ask to add that category
+// product category --> Add Category --> if category not present in the list
+// then
+// program need to print category doesn't exist and you need to ask to add that
+// category
 // product Price
 // delete product
 // update product
