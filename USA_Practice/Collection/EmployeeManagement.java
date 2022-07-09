@@ -7,7 +7,7 @@ public class EmployeeManagement {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<EmployeeBean> arrayList = new ArrayList<>();
-        EmployeeBean e1 = new EmployeeBean(1, "Reyaansh", 5000, "CEO");
+        EmployeeBean e1 = new EmployeeBean(1, "Reyaansh", 5000, "CEO of Apple");
         EmployeeBean e2 = new EmployeeBean(2, "Nidish", 5500, "SWE");
         EmployeeBean e3 = new EmployeeBean(3, "Soham", 5300, "SD2");
         EmployeeBean e4 = new EmployeeBean(4, "Milan", 5600, "Sales");
@@ -96,11 +96,13 @@ public class EmployeeManagement {
                     break;
                 case 6:
                     System.out.println("Enter Position you want to seach for: ");
-                    String position = sc.next().trim();
+                    sc.nextLine();
+                    String position = sc.nextLine();
+                    System.out.println(position);
                     i = 0;
                     flag = 0;
                     for (; i < arrayList.size(); i++) {
-                        if (position == arrayList.get(i).getPositon()) {
+                        if (position.equalsIgnoreCase(arrayList.get(i).getPositon())) {
                             flag = 1;
                             employeeBean = arrayList.get(i);
                             System.out.println(employeeBean);
