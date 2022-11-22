@@ -1,0 +1,8 @@
+Good Evening
+Working with reader too
+Trying Append Mode in files
+Also trying to read files using FileReader
+Removed ln for sysout
+1
+hi there
+trying if else

@@ -1,4 +1,4 @@
-package USA_Practice;
+package USA_Practice.IO;
 
 import java.io.File;
 import java.io.IOException;
