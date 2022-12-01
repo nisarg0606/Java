@@ -6,7 +6,7 @@ public class UnitedStatesPostalServices {
         System.out.println(checkBarCode);
         System.out.println(isCodeValid(checkBarCode));
         System.out.println(genBarCode(95014));
-    }
+    } // --> maths logic thinking ability 
     public static int detCheckSum(int n) {
         int sum = sumOfDigits(n);
         if (sum % 10 == 0) {
