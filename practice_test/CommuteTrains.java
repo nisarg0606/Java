@@ -29,9 +29,9 @@ public class CommuteTrains extends Train implements Rescuers {
             engineType = EngineType.DieselElectric;
         }
         if (engineType == EngineType.DieselElectric) {
-            trackType = new TrackTypes[] {TrackTypes.UrbanTrack, TrackTypes.SharedTrack};
+            trackType = new TrackTypes[] {TrackTypes.UrbanTrunk, TrackTypes.SharedUse};
         } else {
-            trackType = new TrackTypes[] {TrackTypes.UrbanTrack};
+            trackType = new TrackTypes[] {TrackTypes.UrbanTrunk};
         }
 
         // d.	The power of these trains must range between 1000 and 4000. Any thing specified below will set the power to lowest possible and in case specified to be higher than range, will specify to the maximum possible power. [1 mark]

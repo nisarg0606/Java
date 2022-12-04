@@ -32,7 +32,7 @@ public class PlayerTest {
 
 		// display player list for each team
 		for (String team : lstTeam) {
-			System.out.println(team);
+			System.out.println("Team Name: " + team);
 			for (Player player : lstPlayer) {
 				if (player.getTeam().equals(team)) {
 					System.out.println(player.getName());

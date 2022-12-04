@@ -57,7 +57,7 @@ public class GoodsTrain extends Train implements Rescuers {
 
     @Override
     public TrackTypes[] getTrackType() {
-        TrackTypes[] trackTypes = { TrackTypes.SharedTrack, TrackTypes.SharedUse, TrackTypes.UrbanTrack, TrackTypes.UrbanTrunk };
+        TrackTypes[] trackTypes = {TrackTypes.SharedUse, TrackTypes.UrbanTrunk };
         return trackTypes;
     }
 

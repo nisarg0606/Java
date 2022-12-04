@@ -68,4 +68,14 @@ public class TrainStationTest
         return trains;
 	}
 
+    public static void main(String[] args) {
+        TrainStationTest test = new TrainStationTest();
+        ArrayList<Station> stations = new ArrayList<Station>();
+        stations.add(new Station("Station 1", 5, 2, 50));
+        stations.add(new Station("Station 2", 10, 3, 100));
+        stations.add(new Station("Station 3", 15, 4, 150));
+        stations.add(new Station("Station 4", 20, 5, 200));
+        
+        System.out.println("Total tracks: " + test.countTracks(stations, TrackTypes.SharedUse));
+    }
 }

@@ -34,7 +34,7 @@ public class Station {
     public int getTracks(TrackTypes[] type) {
         int totalTracks = 0;
         for (TrackTypes trackType : type) {
-            if (trackType == TrackTypes.SharedTrack || trackType == TrackTypes.SharedUse) {
+            if (trackType == TrackTypes.SharedUse) {
                 totalTracks += totalSharedTracks;
             } else if (trackType == TrackTypes.HighSpeed) {
                 totalTracks += totalHighSpeed;
