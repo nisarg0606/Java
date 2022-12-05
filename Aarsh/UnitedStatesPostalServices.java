@@ -1,4 +1,4 @@
-package Aarsh;
+package aarsh;
 
 public class UnitedStatesPostalServices {
     public static void main(String[] args) {

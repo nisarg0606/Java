@@ -1,4 +1,4 @@
-package Aarsh;
+package aarsh;
 
 public class Factorial { // this is class
     public int FactorialMethod(int n) // this is method

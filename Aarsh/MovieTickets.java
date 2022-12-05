@@ -15,7 +15,7 @@
  * There were 41 different ticket buyers
  */
 
-package Aarsh;
+package aarsh;
 
 import java.util.Scanner;
 

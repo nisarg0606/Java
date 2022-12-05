@@ -1,6 +1,10 @@
-package Aarsh;
+package aarsh;
 import java.util.Scanner;
 public class SumOfAllElementsInArray{
+    SumOfAllElementsInArray()
+    {
+
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         SumOfAllElementsInArray sumOfAllElementsInArray = new SumOfAllElementsInArray(); 

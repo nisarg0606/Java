@@ -1,4 +1,4 @@
-package Aarsh;
+package aarsh;
 // Selection sort in Java
 
 import java.util.Arrays;

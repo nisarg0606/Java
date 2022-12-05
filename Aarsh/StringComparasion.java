@@ -1,4 +1,4 @@
-package Aarsh;
+package aarsh;
 
 import java.util.Scanner;
 

@@ -1,7 +1,5 @@
 package practice_test.sports;
 
-import practice_test_DEC_2.sports.Player;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

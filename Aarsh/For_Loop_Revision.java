@@ -1,4 +1,4 @@
-package Aarsh;
+package aarsh;
 
 public class For_Loop_Revision {
     // types of loops?

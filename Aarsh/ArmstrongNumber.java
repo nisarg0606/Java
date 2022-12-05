@@ -1,4 +1,4 @@
-package Aarsh;
+package aarsh;
 
 public class ArmstrongNumber {
     public static void main(String[] args) {
