@@ -18,7 +18,12 @@ This is used to record the size of the Dragon.  An enumeration called DragonSize
 Methods
 
 	Dragon(DragonSize nSize)
-The constructor takes in the size of the Dragon You are creating.  This value comes from the DragonSize enumeration.  Dragons can be of Size Large, Medium, and Small.  The attributes listed above are set according to the specified size and indicated in the following table.  The constructor must set the attribute in the given range using Math.Random or java.util.Random to determine the exact value.
+The constructor takes in the size of the Dragon You are creating.  
+This value comes from the DragonSize enumeration.  
+Dragons can be of Size Large, Medium, and Small.  
+The attributes listed above are set according to the specified size and indicated 
+in the following table.  The constructor must set the attribute in the given range
+ using Math.Random or java.util.Random to determine the exact value.
 Size/Attribute	Small	Medium	Large
 Hit Points 	51-70 	71-85	86-100 
 Initiative	40-60 	20-40 	0 – 10 
@@ -50,7 +55,10 @@ This will resurrect the dragon by setting the hit points back to the original va
 Implement an appropriate toString method that will show the appropriate information for the dragon. 
 
 	defend(Dragon obOther)
-This is an abstract method (must be implemented in the sub-classes). This method is used to represent another dragon attacking this dragon.  Essentially you will take the attack rating for the other dragon and subtract the defense ranking for the current dragon.  The difference will be the amount of hit points of damage the other dragon causes during the attack.  You will subtract this value from the current hit points for the dragon.
+This is an abstract method (must be implemented in the sub-classes). 
+This method is used to represent another dragon attacking this dragon.  
+Essentially you will take the attack rating for the other dragon and subtract
+the defense ranking for the current dragon.  The difference will be the amount of hit points of damage the other dragon causes during the attack.  You will subtract this value from the current hit points for the dragon.
 
 	doAttack(Dragon obOther)
 This is an abstract method (must be implemented in the sub – classes). This method should be used in conjunction with the defend method.
@@ -62,6 +70,105 @@ You must include as part of your calculation a modifier based upon Dragon size.
 	If the current Dragon is a large dragon, an attack will always hit.
 
  */
-public record Dragon() {
 
+public abstract class Dragon {
+
+    public int nWins;
+    // Attributes
+    int nAttackRank;
+    int nDefenseRank;
+    int nHitPoints;
+    int nInitiative;
+    DragonSize nSize;
+
+    Dragon()
+    {
+        nSize = DragonSize.MEDIUM;
+        nAttackRank = 51;
+        nDefenseRank = 20;
+        nHitPoints = 71;
+        nInitiative = 20;
+    }
+
+    // Constructor
+    public Dragon(DragonSize nSize) {
+        this.nSize = nSize;
+        switch (nSize) {
+            case SMALL:
+                nHitPoints = (int) (Math.random() * 20 + 51);
+                nInitiative = (int) (Math.random() * 20 + 40);
+                nAttackRank = (int) (Math.random() * 15 + 36);
+                nDefenseRank = (int) (Math.random() * 10 + 10);
+                break;
+            case MEDIUM:
+                nHitPoints = (int) (Math.random() * 15 + 71);
+                nInitiative = (int) (Math.random() * 20 + 20);
+                nAttackRank = (int) (Math.random() * 10 + 51);
+                nDefenseRank = (int) (Math.random() * 10 + 20);
+                break;
+            case LARGE:
+                nHitPoints = (int) (Math.random() * 15 + 86);
+                nInitiative = (int) (Math.random() * 11);
+                nAttackRank = (int) (Math.random() * 10 + 61);
+                nDefenseRank = (int) (Math.random() * 6 + 29);
+                break;
+        }
+    }
+
+    // Methods
+    public int getInitiative() {
+        return nInitiative;
+    }
+
+    public int getNumAttacksPerTurn() {
+        switch (nSize) {
+            case SMALL:
+                return 3;
+            case MEDIUM:
+                return 2;
+            case LARGE:
+                return 1;
+        }
+        return 0;
+    }
+
+    public int getAttack() {
+        return nAttackRank;
+    }
+
+    public int getDefense() {
+        return nDefenseRank;
+    }
+
+    public boolean isDead() {
+        if (nHitPoints <= 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public void resurrect() {
+        switch (nSize) {
+            case SMALL:
+                nHitPoints = (int) (Math.random() * 20 + 51);
+                break;
+            case MEDIUM:
+                nHitPoints = (int) (Math.random() * 15 + 71);
+                break;
+            case LARGE:
+                nHitPoints = (int) (Math.random() * 15 + 86);
+                break;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Dragon{" + "nAttackRank=" + nAttackRank + ", nDefenseRank=" + nDefenseRank + ", nHitPoints=" + nHitPoints + ", nInitiative=" + nInitiative + ", nSize=" + nSize + '}';
+    }
+
+    // doAttack method
+    public abstract void doAttack(Dragon obOther);
+
+    // defend method
+    public abstract void defend(Dragon obOther);
 }
