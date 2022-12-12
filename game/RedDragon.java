@@ -16,16 +16,46 @@ public class RedDragon extends Dragon {
 
     @Override
     public void doAttack(Dragon obOther) {
-        switch (obOther.nSize) {
-            case SMALL:
-                obOther.nHitPoints -= (int) (Math.random() * 10 + 1);
-                break;
-            case MEDIUM:
-                obOther.nHitPoints -= (int) (Math.random() * 15 + 1);
-                break;
-            case LARGE:
-                obOther.nHitPoints -= (int) (Math.random() * 20 + 1);
-                break;
+        // if the other dragon is a white dragon, then attack by 120% of normal
+        if (obOther instanceof WhiteDragon) {
+            switch (obOther.nSize) {
+                case SMALL:
+                    obOther.nHitPoints -= (int) (Math.random() * 12 + 1);
+                    break;
+                case MEDIUM:
+                    obOther.nHitPoints -= (int) (Math.random() * 18 + 1);
+                    break;
+                case LARGE:
+                    obOther.nHitPoints -= (int) (Math.random() * 24 + 1);
+                    break;
+            }
+        }
+        // if the other dragon is a green dragon, then attack by 80% of normal
+        else if (obOther instanceof GreenDragon) {
+            switch (obOther.nSize) {
+                case SMALL:
+                    obOther.nHitPoints -= (int) (Math.random() * 8 + 1);
+                    break;
+                case MEDIUM:
+                    obOther.nHitPoints -= (int) (Math.random() * 12 + 1);
+                    break;
+                case LARGE:
+                    obOther.nHitPoints -= (int) (Math.random() * 16 + 1);
+                    break;
+            }
+        } 
+        else {
+            switch (obOther.nSize) {
+                case SMALL:
+                    obOther.nHitPoints -= (int) (Math.random() * 10 + 1);
+                    break;
+                case MEDIUM:
+                    obOther.nHitPoints -= (int) (Math.random() * 15 + 1);
+                    break;
+                case LARGE:
+                    obOther.nHitPoints -= (int) (Math.random() * 20 + 1);
+                    break;
+            }
         }
     }
 
@@ -42,6 +72,10 @@ public class RedDragon extends Dragon {
                 nHitPoints -= (int) (Math.random() * 15 + 1);
                 break;
         }
+    }
 
+    @Override
+    public String toString() {
+        return "RedDragon [nHitPoints=" + nHitPoints + ", nSize=" + nSize + ", sName=" + sName + "]";
     }
 }

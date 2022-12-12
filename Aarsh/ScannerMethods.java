@@ -16,4 +16,11 @@ public class ScannerMethods {
         float n = sc.nextInt();
         return n;
     }
+
+    public static String ScanString()
+    {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        return s;
+    }
 }
