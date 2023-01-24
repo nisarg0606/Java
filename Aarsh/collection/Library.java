@@ -3,7 +3,41 @@ package aarsh.collection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+/*
+ * Create a class called Library that represents a library. The library should have a List collection of books and it should have the following methods:
 
+A method called addBook which accepts a Book object and adds it to the List collection of books.
+A method called searchBook which accepts a String title and returns the Book object with the matching title, or null if no such book is found.
+A method called removeBook which accepts a String title and removes the Book object with the matching title from the List collection of books, if it exists.
+A method called getAllBooks which returns a List of all the books in the library.
+Constraints:
+
+The class Book should have following properties: title,author,publisher and year of publication.
+The class Library should be encapsulated i.e. the internal state of the class should be hidden from the client code.
+Note:
+
+Use encapsulation principles in your solution.
+You are allowed to use any standard library classes or interfaces that are part of the Java SDK to implement the Library class.
+You can use the ArrayList class to implement the List collection of books.
+Example:
+
+
+Library library = new Library();
+Book book1 = new Book("Book1","Author1","Publisher1",2000);
+Book book2 = new Book("Book2","Author2","Publisher2",2010);
+Book book3 = new Book("Book3","Author3","Publisher3",2018);
+library.addBook(book1);
+library.addBook(book2);
+library.addBook(book3);
+List<Book> books = library.getAllBooks();
+// returns [Book1,Book2,Book3]
+Book searchedBook = library.searchBook("Book2");
+// returns Book2
+library.removeBook("Book2");
+List<Book> books = library.getAllBooks();
+// returns [Book1,Book3]
+You can use this problem statement to create a class Library with the methods specified in the problem statement.
+ */
 public class Library {
     List<Book> books;
 
