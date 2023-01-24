@@ -17,8 +17,8 @@ public class ListNode {
     }
 
     // display the list
-    public void display() {
-        ListNode current = this;
+   public static void display(ListNode head) {
+        ListNode current = head;
         while (current != null) {
             System.out.print(current.val + " -> ");
             current = current.next;
