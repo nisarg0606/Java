@@ -40,19 +40,65 @@ public class ShoppingCart {
         cart.add(item);
     }
 
-    public void removeItem(Item item) {
+    public void removeItem(Item item, Scanner sc) {
         int flag = 0;
         for (Item i : cart) {
             if (i.getName().equals(item.getName())) {
-                cart.remove(i);
-                System.out.println(i.getName() + " is removed successfully from the cart...");
-                flag = 1;
-                break;
+                System.out.println("The quantiy of the item " + i.getName() + " is: " + i.getQuantity());
+                if (i.getQuantity() > 1) {
+                    System.out.println("You have more than 1 quantity for this item.");
+                    System.out.println("1 --- To remove all quantity of the item");
+                    System.out.println("2 --- To remove single quantity of the item");
+                    System.out.println("3 --- To remove multiple quantity of the item");
+                    int choice = sc.nextInt();
+                    switch (choice) {
+                        case 1:
+                            cart.remove(i);
+                            System.out.println(i.getName() + " is removed successfully from the cart...");
+                            flag = 1;
+                            break;
+                        case 2:
+                            int quantity = i.getQuantity();
+                            i.setQuantity(quantity - 1);
+                            System.out.println("Updated Quantity");
+                            System.out.println(
+                                    i.getName() + " is removed successfully from the cart and the updated quanity is: "
+                                            + i.getQuantity());
+                            flag = 1;
+                            break;
+                        case 3:
+                            System.out.println("You have " + i.getQuantity()
+                                    + " items in the cart... How many quantity you want to remove ?? : ");
+                            int quantityToRemove = sc.nextInt();
+                            quantity = i.getQuantity();
+                            if (quantityToRemove > quantity) {
+                                System.out.println("You can not remove more items then you have in your cart...");
+                                break;
+                            } else if (quantity == quantityToRemove) {
+                                cart.remove(i);
+                                System.out.println(i.getName() + " is removed successfully from the cart...");
+                                flag = 1;
+                                break;
+                            } else {
+                                i.setQuantity(quantity - quantityToRemove);
+                                System.out.println(
+                                        "The updated quanity for the item " + i.getName() + " is: " + i.getQuantity());
+                                flag = 1;
+                            }
+                            break;
+                        default:
+                            System.out.println("Invalid Choice....");
+                    }
+                } else {
+                    cart.remove(i);
+                    System.out.println(i.getName() + " is removed successfully from the cart...");
+                    flag = 1;
+                    break;
+                }
             }
         }
         if (flag == 0)
             System.out.println("Item is not present in cart which you are trying to remove...");
-
     }
 
     public void displayCart() {
@@ -144,7 +190,7 @@ public class ShoppingCart {
                     System.out.println("Enter item name: ");
                     name = sc.next();
                     item = new Item(name, 0);
-                    cart.removeItem(item);
+                    cart.removeItem(item, sc);
                     break;
                 case 5:
                     cart.displayCart();
