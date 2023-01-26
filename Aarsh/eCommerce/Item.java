@@ -8,6 +8,10 @@ public class Item {
     public Item() {
     }
 
+    public Item(String name) {
+        this.name = name;
+    }
+
     public Item(String name, double price) {
         this.name = name;
         this.price = price;

@@ -144,6 +144,7 @@ public class ShoppingCart {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ShoppingCart cart = new ShoppingCart();
+        double price = 0;
         while (true) {
             System.out.println("1. Add item to cart without quantity and discount");
             System.out.println("2. Add item to cart with quantity and without discount");
@@ -159,10 +160,15 @@ public class ShoppingCart {
                 case 1:
                     System.out.println("Enter item name: ");
                     String name = sc.next();
-                    System.out.println("Enter item price: ");
-                    double price = sc.nextDouble();
-                    item = new Item(name, price);
-                    cart.addItem(item, sc);
+                    item = new Item(name);
+                    if (cart.isItemExists(item)) {
+                        cart.addItem(item, sc);
+                    } else {
+                        System.out.println("Enter item price: ");
+                        price = sc.nextDouble();
+                        item = new Item(name, price);
+                        cart.addItem(item, sc);
+                    }
                     break;
                 case 2:
                     System.out.println("Enter item name: ");
