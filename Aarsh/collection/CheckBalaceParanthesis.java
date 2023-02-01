@@ -13,19 +13,15 @@ public class CheckBalaceParanthesis {
             if (s.charAt(i) == '{' || s.charAt(i) == '[' || s.charAt(i) == '(') { // ---> { [ (
                 items.push(s.charAt(i));
             } else if (Arrays.asList(characters).contains(s.charAt(i))) { // ---> } ) ]
+                if (items.isEmpty())
+                    return false;
                 if (s.charAt(i) == ')') { // if yes go inside, if no then go to other else if
-                    if (items.isEmpty())
-                        return false;
                     if (items.pop() != '(')
                         return false;
                 } else if (s.charAt(i) == ']') {
-                    if (items.isEmpty())
-                        return false;
                     if (items.pop() != '[')
                         return false;
                 } else if (s.charAt(i) == '}') {
-                    if (items.isEmpty())
-                        return false;
                     if (items.pop() != '{')
                         return false;
                 }
