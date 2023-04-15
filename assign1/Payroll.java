@@ -7,7 +7,7 @@ import java.util.TreeSet;
 
 public class Payroll {
     public static void main(String[] args) {
-        File file = new File("D:\\Java\\assign1\\Salary.txt");
+        File file = new File("Salary.txt");
         try (Scanner sc = new Scanner(file)) {
             SortedSet<Double> associate = new TreeSet<>();
             SortedSet<Double> full = new TreeSet<>();
