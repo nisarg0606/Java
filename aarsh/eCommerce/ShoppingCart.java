@@ -1,4 +1,4 @@
-package aarsh.ecommerce;
+package aarsh.eCommerce;
 
 import java.util.LinkedList;
 import java.util.Scanner;

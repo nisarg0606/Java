@@ -1,4 +1,4 @@
-package aarsh.ecommerce;
+package aarsh.eCommerce;
 
 public class Item {
     private String name;
